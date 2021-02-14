@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login">
+            <label for="username">Username</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password</label>
+  <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+
+    <input type="submit" value="Submit" onclick="submit(event, this.id)">
+        <script>
+			const submit = (e) => {
+				e.preventDefault();
+				let user = document.getElementById('username').value;
+				let pw = document.getElementById('username').value;
+				console.log(user, pw);
+				
+			}
+		</script>
+    </div>
+</body>
+</html>
